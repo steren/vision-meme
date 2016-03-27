@@ -25,7 +25,7 @@ var http = function(method, url, body, cb) {
   xhr.onreadystatechange = function() {
     if (xhr.readyState != 4) { return; }
     if (xhr.status >= 400) {
-      notify('API request failed');
+      message('API request failed');
       console.log('XHR failed', xhr.responseText);
       return;
     }
