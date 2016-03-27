@@ -10,4 +10,4 @@ How to use
 ----------
 
 * replace `API_KEY` with the API key of your Google Cloud project in `vision-meme.js` (get it at https://console.cloud.google.com/apis/credentials)
-* run a local server (for example by running `python -m SimtleHTTPServer`)
+* run a local server (for example by running `python -m SimpleHTTPServer`)
