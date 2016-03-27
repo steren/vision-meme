@@ -1,0 +1,87 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  <title>Google Cloud Vision API and memes</title>
+
+
+  <style>
+    .header {
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%
+    }
+    .footer {
+      position: absolute;
+      bottom:0;
+      left:0;
+      width:100%;
+    }
+
+
+    .some-space {
+      margin: 20px;
+    }
+    .little-space-l-r {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align:center;
+    }
+
+    .main {
+      height: 100%;
+    }
+
+    body {
+      background-color: #FAFAFA;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="some-space center">
+      <select onchange="selectChange(event.target.value);" id="select">
+        <option>dog-or-muffin.jpg</option> 
+        <option>puppy-or-bagel.jpg</option>
+        <option>shiba-or-marshmallow.jpg</option>
+        <option>sloth-or-croissant.jpg</option>
+        <option>dog-or-friedchicken.jpg</option>
+      </select>
+      <span class="little-space-l-r">or</span>
+      <input type="file" onchange="readFile(this);" />
+    </div>
+
+    <div class="some-space center">
+      <div class="mdl-spinner mdl-js-spinner is-active" id="loader"></div>
+    </div>
+  </div>
+
+  <div class="center main">
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <div class="footer">
+    <div class="some-space center">
+      <p>
+        results from the <a href="https://cloud.google.com/vision/">Google Cloud Vision API</a> - memes from <a href="https://www.reddit.com/r/funny">/r/funny</a>
+      <br>
+        by <a href="http://steren.fr">Steren</a>
+      </p>
+    </div>
+
+  </div>
+
+  <script src="vision-meme.js"></script>
+
+
+</body>
+</html>
