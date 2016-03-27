@@ -129,7 +129,7 @@ var drawResults = function(splitX, splitY, data) {
 };
 
 var selectChange = function(fileName) {
-  processImage(window.location.origin + "/img/"+ fileName);
+  processImage(document.location.href + "img/"+ fileName);
 }
 
 function readFile(input) {
